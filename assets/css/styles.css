@@ -50,6 +50,7 @@
     padding: 5px 10px;
     text-decoration: none;
     font-weight: 700;
+    font-size: 20px;
 }
 
 #logo:hover {
@@ -107,7 +108,7 @@
 
 #content {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 #posts {
@@ -121,12 +122,15 @@
     display: flex;
     font-family: 'Poppins';
     font-weight: 400;
+    margin: 30px 0px;
 }
 
 .post img {
-    width: 500px;
-    height: 210px;
-    object-fit: cover;
+    width: 300px;
+    height: 160px;
+    object-fit: contain;
+    border: 1px solid #eee;
+    margin-right: 2.5rem;
 }
 
 .post .leer-mas {
@@ -138,22 +142,26 @@
     color: var(--theme-color-red-hover);
 }
 
+#filter {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 15px;
+}
+
 #filter ul {
     display: flex;
     font-family: 'Poppins';
     list-style: none;
-    justify-content: flex-start;
-    margin-top: 10px;
-}
-
-#filter ul li {
-    margin: 2px 0.5%;
 }
 
 #filter ul li a {
     color: #000;
     text-decoration: none;
     padding: 5px 10px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 #filter ul li a:hover {
@@ -163,20 +171,37 @@
 
 #search-container {
     position: relative;
-    width: 30%;
-    padding: 10px 0px 10px 10px;
+    width: 15%;
+    padding: 10px;
     border: 1px solid #ccc;
+}
+
+#search-container:hover {
+    border-color: var(--theme-color-red-hover);
+    cursor: text;
 }
 
 #search-input {
     font-size: 16px;
     border: none;
+    width: 85%;
 }
 
-.fa-solid .fa-magnifying-glass {
+#search-input:focus {
+    outline: none;
+    border: 0;
+    caret-color: var(--theme-color-red);
+}
+
+.fa-solid.fa-magnifying-glass {
     position: absolute;
-    top: 50%;
+    top: 30%;
     right: 10px;
+    cursor: pointer;
+}
+
+.fa-solid.fa-magnifying-glass:hover {
+    color: var(--theme-color-red-hover);
 }
 
 #footer {

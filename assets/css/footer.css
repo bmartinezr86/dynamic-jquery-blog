@@ -1,0 +1,7 @@
+#footer {
+    background-color: var(--theme-color-red);
+    color: #fff;
+    font-family: 'Poppins';
+    padding: 10px 0px;
+    text-align: center;
+}

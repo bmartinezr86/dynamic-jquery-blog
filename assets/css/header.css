@@ -18,7 +18,11 @@
     text-decoration: none;
     font-weight: 700;
     font-size: 20px;
-    border:1px solid #000;
+    border: 1px solid #000;
+    text-shadow: -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
 }
 
 #logo:hover {
@@ -47,7 +51,7 @@
 #menu li a:hover,
 #menu li a:hover .fa-user {
     background-color: var(--theme-color-hover);
-    color: white;
+    color: var(--txt-color);
     border: 1px solid #000;
 }
 
@@ -71,15 +75,16 @@
 #tema:hover {
     cursor: pointer;
     /* box-shadow: var(--theme-color-hover) 0px 3px 8px; */
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
 #desplegable-temas {
     position: absolute;
     top: 150%;
-    left:50%;
+    left: 50%;
     transform: translateX(-50%);
     margin: 0px auto;
-    background-color:#fff;
+    background-color: #fff;
     border: 1px solid #e0e0e0;
     padding: 10px;
     width: 100%;
@@ -98,7 +103,7 @@
     height: 25px;
     border-radius: 100%;
     background-color: var(--theme-color);
-    
+
 }
 
 #opcion-rosa:hover {
@@ -109,21 +114,22 @@
     width: 25px;
     height: 25px;
     border-radius: 100%;
-    background-color: var(--theme-color-green);
+    background-color: var(--theme-color);
 }
 
 #opcion-verde:hover {
-    background-color: var(--theme-color-green-hover);
+    background-color: var(--theme-color-hover);
 }
 
 #opcion-azul {
     width: 25px;
     height: 25px;
     border-radius: 100%;
-    background-color: var(--theme-color-blue);
+    background-color: var(--theme-color);
 }
+
 #opcion-azul:hover {
-    background-color: var(--theme-color-blue-hover);
+    background-color: var(--theme-color-hover);
 
 }
 
@@ -131,9 +137,9 @@
     width: 25px;
     height: 25px;
     border-radius: 100%;
-    background-color: var(--theme-color-yellow);
+    background-color: var(--theme-color);
 }
 
 #opcion-amarillo:hover {
-    background-color: var(--theme-color-yellow-hover);
+    background-color: var(--theme-color-hover);
 }

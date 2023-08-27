@@ -1,6 +1,6 @@
 #footer {
-    background-color: var(--theme-color-red);
-    color: #fff;
+    background-color: var(--theme-color);
+    color: var(--txt-color);
     font-family: 'Poppins';
     padding: 10px 0px;
     text-align: center;

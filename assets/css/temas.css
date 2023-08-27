@@ -1,0 +1,29 @@
+.tema-rosa {
+    --theme-color: #FF5757;
+    --theme-color-hover: #ff7777;
+    --txt-color: #fff;
+    --bg-img: url("../img/landingpage/bosque-rojo.jpg");
+}
+
+.tema-verde {
+    --theme-color: #258d19;
+    --theme-color-hover: #4ea93b;
+    --txt-color: #fff;
+    --bg-img: url("../img/landingpage/bosque-verde.jpg");
+
+}
+
+.tema-azul {
+    --theme-color: #1271c9;
+    --theme-color-hover: #3d8edf;
+    --bg-img: url("../img/landingpage/bosque-azul.jpeg");
+    --txt-color: #fff;
+
+}
+
+.tema-amarillo {
+    --theme-color: #ffff6a;
+    --theme-color-hover: #ffff8e;
+    --txt-color: #000;
+    --bg-img: url("../img/landingpage/bosque-amarillo.jpeg");
+}

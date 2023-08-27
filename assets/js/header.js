@@ -1,5 +1,7 @@
 $(document).ready(function () {
   var headerContent = $("#header");
+  var body = $("body");
+
   function primaryMenu() {
     var nav = $("<nav></nav>");
     var ulMenu = $('<ul id="menu"></ul>');
@@ -44,7 +46,7 @@ $(document).ready(function () {
     return btnChangeTema;
   }
 
-  function funcionalBtnTheme() {
+  function funcionaDesplegableTheme() {
     $(document).on("click", "#tema", function () {
       var desplegable = $("#desplegable-temas");
 
@@ -56,12 +58,30 @@ $(document).ready(function () {
     });
   }
 
-  function changeTheme() {
-    var body = $(body);
-    body.addClass("tema-rosa");
+  function pintarOpcionesTemas() {
+    var opcionRosa = $("#opcion-rosa");
+    var opcionVerde = $("#opcion-verde");
+    var opcionAzul = $("#opcion-azul");
+    var opcionAmarillo = $("#opcion-amarillo");
+    opcionRosa.addClass("tema-rosa");
+    opcionVerde.addClass("tema-verde");
+    opcionAzul.addClass("tema-azul");
+    opcionAmarillo.addClass("tema-amarillo");
+  }
+  function changeTheme(selectedTheme) {
+    var themes = ["tema-rosa", "tema-verde", "tema-azul", "tema-amarillo"];
+
+    body.removeClass(themes.join(" ")).addClass(selectedTheme);
+    $(".opcion").removeClass("active");
+    $(`.opcion-${selectedTheme}`).addClass("active");
+
+    pintarOpcionesTemas();
+  }
+
+  function funcionalBtnTheme() {
     $(document).on("click", ".opcion", function () {
-      var $this = $(this);
-      // $this.
+      var selectedTheme = "tema-" + $(this).attr("id").replace("opcion-", "");
+      changeTheme(selectedTheme);
     });
   }
 
@@ -80,8 +100,9 @@ $(document).ready(function () {
   function header() {
     headerContent.append(logo());
     headerContent.append(primaryMenu());
+    funcionaDesplegableTheme();
     funcionalBtnTheme();
-    changeTheme();
+    changeTheme("tema-rosa");
   }
 
   header();

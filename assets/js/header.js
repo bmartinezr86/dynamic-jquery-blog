@@ -89,10 +89,22 @@ $(document).ready(function () {
     return logo;
   }
 
+  function menuHamburguer() {
+    // var menuHamburguer
+  }
+
+  function funcionalMenuHamburguer() {
+    $(".menu-toggle").click(function () {
+      $(".bar").toggleClass("change");
+      $("#menu").toggleClass("show");
+    });
+  }
+
   function header() {
     headerContent.append(logo());
     headerContent.append(primaryMenu());
     funcionaDesplegableTheme();
+    menuHamburguer();
     funcionalBtnTheme();
     changeTheme("tema-rosa");
   }

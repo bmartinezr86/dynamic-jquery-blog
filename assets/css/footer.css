@@ -1,7 +1,23 @@
 #footer {
-    background-color: var(--theme-color);
-    color: var(--txt-color);
-    font-family: 'Poppins';
-    padding: 10px 0px;
+    padding: 25px 0px;
     text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.3rem;
 }
+
+#footer .links i{
+    margin-left: 10px;
+}
+
+#footer .links a{
+    margin-left: 10px;
+    color: var(--theme-color);
+}
+
+#footer .links a:hover {
+    color: var(--theme-color-hover);
+    cursor: pointer;
+}
+

@@ -1,16 +1,16 @@
 $(document).ready(function () {
   var container = $("#container");
 
-  function capitalizeFirstLetter(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
-  }
-
   function banner() {
     var banner = $('<section id="banner"></section>');
     container.append(banner);
   }
 
   function posts() {
+    var loadingElement = $('<div class="loading"></div>');
+    var spinner = $('<div class="spinner"></div>');
+    loadingElement.append(spinner);
+    container.append(loadingElement);
     const settings = {
       async: true,
       crossDomain: true,
@@ -23,28 +23,44 @@ $(document).ready(function () {
       },
       processData: false,
       data: '{\r\n    "text": "Top news",\r\n    "region": "wt-wt"\r\n}',
+      beforeSend: function () {
+        // Se ejecuta antes de la petición AJAX
+        loadingElement.show(); // Mostrar pantalla de carga
+      },
+      complete: function () {
+        // Se ejecuta después de la petición AJAX (tanto en éxito como en error)
+        loadingElement.hide(); // Ocultar pantalla de carga
+      },
     };
 
     $.ajax(settings).done(function (response) {
       var posts = $('<div id="posts"></div>');
       const newsArray = response.news;
-      console.log(newsArray);
       newsArray.forEach((newsItem, index) => {
         var post = $(
           '<article id="post-' + index + '" class="post"></article>'
         );
 
         var img = $(
-          '<div><img src="' +
-            newsItem.image +
-            '" alt="' +
+          '<div><a href="' +
+            newsItem.url +
+            '"><img alt="' +
             newsItem.title +
             '" title="' +
             newsItem.title +
-            '"></div>'
+            '"></a></div>'
         );
+        console.log(newsItem.image);
+        if (newsItem.image) {
+          img.find("img").attr("src", newsItem.image);
+        } else {
+          const imageNotFound = "assets/img/noticias/API_News.png";
+          img.find("img").attr("src", imageNotFound);
+        }
         var containerTxtPost = $("<div></div>");
-        var title = $("<h2>" + newsItem.title + "</h2>");
+        var title = $(
+          '<h2><a href="' + newsItem.url + '">' + newsItem.title + "</a></h2>"
+        );
 
         // Procesar la fecha
         var date = new Date(newsItem.date);
@@ -56,7 +72,6 @@ $(document).ready(function () {
           '<div class="meta-data"><span class="source">' +
             newsItem.source +
             '</span> | <span class="fecha">' +
-            // capitalizeFirstLetter(month) +
             month +
             " " +
             day +

@@ -16,7 +16,13 @@
     text-decoration: none;
     font-weight: 600;
     font-size: 20px;
-  
+    transition: color 0.3s ease;
+
+}
+
+#logo:hover {
+    color: var(--theme-color-hover);
+    transition: color 0.3s ease;
 }
 
 

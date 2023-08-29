@@ -7,17 +7,18 @@
     font-size: 1.3rem;
 }
 
-#footer .links i{
+#footer .links i {
     margin-left: 10px;
 }
 
-#footer .links a{
+#footer .links a {
     margin-left: 10px;
     color: var(--theme-color);
+    transition: color 0.3s ease;
 }
 
 #footer .links a:hover {
     color: var(--theme-color-hover);
+    transition: color 0.3s ease;
     cursor: pointer;
 }
-

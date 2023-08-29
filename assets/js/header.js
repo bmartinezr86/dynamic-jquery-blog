@@ -25,7 +25,6 @@ $(document).ready(function () {
       ulMenu.append(liPag);
     }
     ulMenu.append(btnChangeTheme());
-    ulMenu.append(loginBtn());
     nav.append(ulMenu);
 
     return nav;
@@ -34,7 +33,7 @@ $(document).ready(function () {
   function btnChangeTheme() {
     var btnChangeTema = $('<div id="tema"></div>');
     var desplegableTemas = $('<div id="desplegable-temas"></div>');
-    var temas = ["rosa", "verde", "amarillo", "azul"];
+    var temas = ["rosa", "verde", "morado", "azul"];
     for (let tema = 0; tema < temas.length; tema++) {
       var spanTema = $(
         '<div class="opcion" id="opcion-' + temas[tema] + '"></div>'
@@ -62,14 +61,14 @@ $(document).ready(function () {
     var opcionRosa = $("#opcion-rosa");
     var opcionVerde = $("#opcion-verde");
     var opcionAzul = $("#opcion-azul");
-    var opcionAmarillo = $("#opcion-amarillo");
+    var opcionMorada = $("#opcion-morado");
     opcionRosa.addClass("tema-rosa");
     opcionVerde.addClass("tema-verde");
     opcionAzul.addClass("tema-azul");
-    opcionAmarillo.addClass("tema-amarillo");
+    opcionMorada.addClass("tema-morado");
   }
   function changeTheme(selectedTheme) {
-    var themes = ["tema-rosa", "tema-verde", "tema-azul", "tema-amarillo"];
+    var themes = ["tema-rosa", "tema-verde", "tema-azul", "tema-morado"];
 
     body.removeClass(themes.join(" ")).addClass(selectedTheme);
     $(".opcion").removeClass("active");
@@ -85,15 +84,8 @@ $(document).ready(function () {
     });
   }
 
-  function loginBtn() {
-    var loginBtn = $(
-      '<li><a href="login.html"><i class="fa-solid fa-user"></i> Login</a><li>'
-    );
-    return loginBtn;
-  }
-
   function logo() {
-    var logo = $('<h1><a href="index.html" id="logo">BRIZZOM</a></h1>');
+    var logo = $('<h1><a href="index.html" id="logo">API News</a></h1>');
     return logo;
   }
 

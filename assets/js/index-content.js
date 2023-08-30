@@ -50,7 +50,6 @@ $(document).ready(function () {
             newsItem.title +
             '"></a></div>'
         );
-        console.log(newsItem.image);
         if (newsItem.image) {
           img.find("img").attr("src", newsItem.image);
         } else {
@@ -80,14 +79,10 @@ $(document).ready(function () {
             "</span></div>"
         );
         var desc = $("<p>" + newsItem.body + "...</p>");
-        var readMore = $(
-          '<a href="' + newsItem.url + '" class="leer-mas">Leer más</a>'
-        );
 
         containerTxtPost.append(title);
         containerTxtPost.append(metadata);
         containerTxtPost.append(desc);
-        containerTxtPost.append(readMore);
 
         post.append(img);
         post.append(containerTxtPost);

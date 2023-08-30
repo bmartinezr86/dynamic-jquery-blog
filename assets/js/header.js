@@ -1,6 +1,7 @@
 $(document).ready(function () {
   var headerContent = $("#header");
   var body = $("body");
+  var html = $("html");
 
   function primaryMenu() {
     var nav = $("<nav></nav>");
@@ -71,6 +72,7 @@ $(document).ready(function () {
     var themes = ["tema-rosa", "tema-verde", "tema-azul", "tema-morado"];
 
     body.removeClass(themes.join(" ")).addClass(selectedTheme);
+    html.removeClass(themes.join(" ")).addClass(selectedTheme);
     $(".opcion").removeClass("active");
     $(`.opcion-${selectedTheme}`).addClass("active");
 
@@ -90,13 +92,20 @@ $(document).ready(function () {
   }
 
   function menuHamburguer() {
-    // var menuHamburguer
+    var menuHamburguer = $('<div class="menu-toggle"></div>');
+    var toogleBars = 3;
+    for (let i = 0; i < toogleBars; i++) {
+      const bar = $('<div class="bar"></div>');
+      menuHamburguer.append(bar);
+    }
+    headerContent.append(menuHamburguer);
   }
 
   function funcionalMenuHamburguer() {
     $(".menu-toggle").click(function () {
       $(".bar").toggleClass("change");
       $("#menu").toggleClass("show");
+      $(".menu-toggle").toggleClass("active");
     });
   }
 
@@ -104,9 +113,10 @@ $(document).ready(function () {
     headerContent.append(logo());
     headerContent.append(primaryMenu());
     funcionaDesplegableTheme();
-    menuHamburguer();
     funcionalBtnTheme();
     changeTheme("tema-rosa");
+    menuHamburguer();
+    funcionalMenuHamburguer();
   }
 
   header();

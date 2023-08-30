@@ -1,0 +1,41 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    scrollbar-gutter: stable;
+}
+
+/* Cambiar el color de la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    /* Color de fondo de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--theme-color);
+    /* Color del pulgador de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--theme-color-hover);
+    /* Color del pulgador al pasar el cursor por encima */
+}
+
+html {
+    /* Cambiar el color de la barra de desplazamiento en Firefox */
+    scrollbar-color: var(--theme-color) #f1f1f1;
+}
+
+html:hover {
+    scrollbar-color: var(--theme-color-hover) #f1f1f1;
+}
+
+html:active {
+    scrollbar-color: var(--theme-color-hover) #f1f1f1;
+}

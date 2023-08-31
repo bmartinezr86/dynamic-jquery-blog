@@ -6,3 +6,39 @@
 @import url("loading.css");
 @import url("index-content.css");
 @import url("media-queries.css");
+
+/*Calculadora*/
+
+#containerCalc {
+    width: 90vh;
+    height: 90vh;
+}
+
+#calculadora {
+    width: 500px;
+    height: 600px;
+    border: 1px solid #ccc;
+    margin: 150px auto;
+    overflow: hidden;
+}
+
+#container-resultado {
+    background-color: red;
+    width: 500px;
+    height: 20%;
+}
+
+#container-options {
+    display: flex;
+    background-color: red;
+}
+
+.btn-calc {
+    padding: 30px;
+    border: 1px solid #ccc;
+    background-color: #e0e0e0;
+}
+
+#container-numbers {
+    display: flex;
+}

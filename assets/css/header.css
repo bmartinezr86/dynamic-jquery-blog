@@ -2,156 +2,149 @@
 @import url("temas.css");
 
 #header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 20px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px 0px;
 }
 
 #logo {
-    font-family: 'Poppins';
-    color: #000;
-    padding: 5px 10px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.5rem;
-    transition: color 0.3s ease;
-
+  font-family: "Poppins";
+  color: #000;
+  padding: 5px 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
 }
 
 #logo:hover {
-    color: var(--theme-color-hover);
-    transition: color 0.3s ease;
+  color: var(--theme-color-hover);
+  transition: color 0.3s ease;
 }
 
-
 #menu {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #menu a {
-    font-family: 'Poppins';
-    background-color: transparent;
-    padding: 5px 10px;
+  font-family: "Poppins";
+  background-color: transparent;
+  padding: 5px 10px;
 }
 
 #menu a,
 .fa-user {
-    color: black;
-    text-decoration: none;
-    border: 1px solid transparent;
+  color: black;
+  text-decoration: none;
+  border: 1px solid transparent;
 }
 
 #menu li a:hover,
 #menu li a:hover .fa-user {
-    color: var(--theme-color-hover);
+  color: var(--theme-color-hover);
 }
 
 #menu li a:hover .fa-user {
-    border: 1px solid transparent;
+  border: 1px solid transparent;
 }
 
 #tema {
-    margin-left: 25px;
-    margin-right: 25px;
-    background-color: var(--theme-color);
-    width: 25px;
-    height: 25px;
-    border-radius: 100%;
-    position: relative;
-    background-color: var(--theme-color-hover);
+  margin-left: 25px;
+  margin-right: 25px;
+  background-color: var(--theme-color);
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  position: relative;
 }
 
 #tema:hover {
-    cursor: pointer;
-    /* box-shadow: var(--theme-color-hover) 0px 3px 8px; */
-    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  background-color: var(--theme-color-hover);
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
 #desplegable-temas {
-    position: absolute;
-    top: 150%;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 0px auto;
-    background-color: #fff;
-    border: 1px solid #e0e0e0;
-    padding: 10px;
-    width: 100%;
-    border-radius: 15px;
-
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0px auto;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+  width: 100%;
+  border-radius: 15px;
 }
 
 .opcion {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .opcion:first-child {
-    margin-top: 0px;
+  margin-top: 0px;
 }
 
 /* Temas */
 #opcion-rosa {
-    width: 25px;
-    height: 25px;
-    border-radius: 100%;
-    background-color: var(--theme-color);
-
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background-color: var(--theme-color);
 }
 
 #opcion-rosa:hover {
-    background-color: var(--theme-color-hover);
+  background-color: var(--theme-color-hover);
 }
 
 #opcion-verde {
-    width: 25px;
-    height: 25px;
-    border-radius: 100%;
-    background-color: var(--theme-color);
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background-color: var(--theme-color);
 }
 
 #opcion-verde:hover {
-    background-color: var(--theme-color-hover);
+  background-color: var(--theme-color-hover);
 }
 
 #opcion-azul {
-    width: 25px;
-    height: 25px;
-    border-radius: 100%;
-    background-color: var(--theme-color);
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background-color: var(--theme-color);
 }
 
 #opcion-azul:hover {
-    background-color: var(--theme-color-hover);
-
+  background-color: var(--theme-color-hover);
 }
 
 #opcion-morado {
-    width: 25px;
-    height: 25px;
-    border-radius: 100%;
-    background-color: var(--theme-color);
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background-color: var(--theme-color);
 }
 
 #opcion-morado:hover {
-    background-color: var(--theme-color-hover);
+  background-color: var(--theme-color-hover);
 }
 
-
 .menu-toggle {
-    display: none;
-    opacity: 0;
-    cursor: pointer;
-    transition: opacity 0.5s;
+  display: none;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 0.5s;
 }
 
 .bar {
-    width: 30px;
-    height: 3px;
-    background-color: #333;
-    margin: 3px 0;
-    transition: 0.4s;
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  margin: 3px 0;
+  transition: 0.4s;
 }

@@ -5,6 +5,7 @@
 
 body {
     scrollbar-gutter: stable;
+    min-height: 100vh;
 }
 
 /* Cambiar el color de la barra de desplazamiento */

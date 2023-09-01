@@ -3,9 +3,9 @@ $(document).ready(function () {
   function estructura() {
     var calculadora = $('<div id="calculadora"></div>');
     var containerResult = $('<div id="container-resultado"></div>');
-    var operation = $('<span id="operation">1+1+1+1</span>');
+    var operation = $('<span id="operation"></span>');
     var result = $(
-      '<div><span id="operator">+</span><span id="result">4</span></div>'
+      '<div><span id="operator"></span><span id="result"></span></div>'
     );
 
     containerResult.append(operation);
@@ -56,10 +56,63 @@ $(document).ready(function () {
   }
 
   function funcionalityCalc() {
-    var btnsCalc = $(".btn-calc");
+    var operationContainer = $("#operation");
+    var operatorContainer = $("#operator");
+    var opertorInUse = "";
+    var operation = "";
+
+    $(document).on("click", ".btn-calc", function () {
+      var btnSeleccionado = $(this).attr("id");
+      switch (btnSeleccionado) {
+        case "reset":
+          operation = "";
+          opertorInUse = "";
+          operationContainer.text(operation);
+          $("#result").text(operation);
+          break;
+        case "percentag":
+          opertorInUse = "%";
+          operation += opertorInUse;
+          operatorContainer.text(opertorInUse);
+          break;
+        case "divide":
+          opertorInUse = "/";
+          operation += opertorInUse;
+          break;
+        case "multiply":
+          opertorInUse = "*";
+          operation += opertorInUse;
+          break;
+        case "minus":
+          opertorInUse = "-";
+          operation += opertorInUse;
+          break;
+        case "plus":
+          opertorInUse = "+";
+          operation += opertorInUse;
+          break;
+        case "dot":
+          operation += ".";
+          break;
+        case "delete":
+          operation = operation.slice(0, -1);
+          break;
+        case "equal":
+          var result = eval(operation);
+          $("#result").text(result);
+          break;
+        default: // si no es uno de los anteriores botones es un numero
+          var num = btnSeleccionado.split("-").pop();
+          operation += num;
+          break;
+      }
+      operatorContainer.text(opertorInUse);
+      operationContainer.text(operation);
+    });
   }
   function calculadora() {
     estructura();
+    funcionalityCalc();
   }
 
   calculadora();

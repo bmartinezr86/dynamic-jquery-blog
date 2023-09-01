@@ -109,3 +109,11 @@
         display: block;
     }
 }
+
+
+@media (max-width: 400px) {
+    #calculadora {
+    width: 350px;
+    height: 600px;
+    }
+}

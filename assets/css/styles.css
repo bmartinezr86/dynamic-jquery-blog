@@ -7,7 +7,29 @@
 @import url("index-content.css");
 @import url("calculadora.css");
 @import url("media-queries.css");
+@import url("reloj.css");
 
+#container-reloj {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Orbitron';
+    font-size: 4rem;
+    height: 75vh;
 
+}
+
+#reloj {
+    color: var(--theme-color);
+    border: 3px solid var(--theme-color);
+    width: 30%;
+    background-color: #f8f8f8;
+    border-radius: 25px;
+}
+
+#reloj:hover {
+    color: var(--theme-color-hover);
+}
 
 

@@ -8,28 +8,62 @@
 @import url("calculadora.css");
 @import url("media-queries.css");
 @import url("reloj.css");
+@import url("contacto.css");
 
-#container-reloj {
+#container-form {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    font-family: 'Orbitron';
-    font-size: 4rem;
-    height: 75vh;
+    height: 85vh;
+    width: 100vw;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    width: 800px;
+    height: 550px;
+    border: 1px solid #e0e0e0;
 
 }
 
-#reloj {
+#contact-form h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
     color: var(--theme-color);
-    border: 3px solid var(--theme-color);
-    width: 30%;
-    background-color: #f8f8f8;
-    border-radius: 25px;
 }
 
-#reloj:hover {
-    color: var(--theme-color-hover);
+#contact-form input,
+#contact-form textarea,
+#contact-form [type="submit"] {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    width: 85%;
+    padding: 10px;
 }
 
+#contact-form #submit {
+    background-color: var(--theme-color);
+    color: #fff;
+    border: none;
+    width: 88%;
 
+}
+
+#contact-form #submit:hover {
+    background-color: var(--theme-color-hover);
+    cursor: pointer;
+}
+
+#container-form .send-message {
+    font-size: 1.5rem;
+    color: var(--theme-color);
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+
+}

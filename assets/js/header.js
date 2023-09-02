@@ -6,7 +6,7 @@ $(document).ready(function () {
   function primaryMenu() {
     var nav = $("<nav></nav>");
     var ulMenu = $('<ul id="menu"></ul>');
-    var paginas = ["Inicio", "Calculadora", "Reloj", "Juego", "Contacto"];
+    var paginas = ["Inicio", "Calculadora", "Reloj", "Contacto"];
     for (let pagina = 0; pagina < paginas.length; pagina++) {
       var liPag = $("<li></li>");
       var linkPag = "";
